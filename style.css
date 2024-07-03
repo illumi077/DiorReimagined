@@ -549,8 +549,8 @@ ul{
   @media(max-width: 574px){
     .footer-col{
       width: 100%;
-      &h4 {margin-bottom: 15px;}
-  }
+    }
+    .footer-col h4 {margin-bottom: 15px;}
   }
   /* form css   */
   
