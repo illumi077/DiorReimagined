@@ -22,6 +22,7 @@
     font-family: 'Parabole';
     src: url('./fonts/Parabole.ttf');
 }
+@import url('https://fonts.googleapis.com/css?family=Damion|Muli:400,600');
 .dif-font1{
     font-family: myfont1;
 }
@@ -404,7 +405,6 @@ nav .mid-nav {
     height: 100vh;
     display: grid;
     place-items: center;
-    background: url(./resources/images/fashion/dd.jpg);
     background-position: center;
     object-fit: cover;
 }
@@ -443,7 +443,7 @@ nav .mid-nav {
     justify-content: center;
     align-items: center;
     flex: 0 1 10vw;
-    height:90%;
+    height:95%;
     margin: 0 5px;
     background-color: #000;
     overflow: hidden;
@@ -457,3 +457,157 @@ nav .mid-nav {
     object-fit: cover;
     
 }
+@media (max-width: 668px) {
+    .model {
+      flex: 0 1 33%;
+      margin: 0 3px;
+    }
+    .model-gallery {
+        overflow-x: scroll;
+    }
+  }
+
+.container{
+    max-width: 1170px;
+    margin:auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    background-color: #ffff;
+    padding: 100px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 30px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #090308;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #24202000;
+    text-decoration: none;
+    font-weight: 300;
+    color: #272323;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    padding-left: 8px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(216, 172, 210, 0.557);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #3d4355;
+    background-color: #0000;
+}
+
+
+@media(max-width: 767px){
+    .footer{
+        padding: 1vh;
+    }
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+      &h4 {margin-bottom: 15px;}
+  }
+  }
+  /* form css   */
+  
+   .form {
+      width: 80%;
+      position: relative;
+      height: 60px;
+      overflow: hidden;
+    }
+  
+    .form input {
+      width: 100%;
+      height: 100%;
+      color: #000;
+      padding-top: 20px;
+      border: none;
+      background-color:#fff;
+    }
+    .form label {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      border-bottom: 1px solid white;
+    }
+    .form label::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      border-bottom: 3px solid #e91e63;
+      transform: translateX(-100%);
+      transition: all 0.3s ease;
+    }
+  
+    .content-name {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      padding-bottom: 5px;
+      transition: all 0.3s ease;
+    }
+    .form input:focus {
+      outline: none;
+    }
+    .form input:focus + .label-name .content-name,
+    .form input:valid + .label-name .content-name {
+      transform: translateY(-150%);
+      font-size: 14px;
+      left: 0px;
+      color: #e91e63;
+    }
+    .form input:focus + .label-name::after,
+    .form input:valid + .label-name::after {
+      transform: translateX(0%);
+    }

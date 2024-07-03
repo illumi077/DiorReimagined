@@ -136,7 +136,7 @@ gsap.to('#shows .scroll-heading',{
     trigger:'#shows',
     scroller:'body',
     start:"top 0",
-    end:"top -100%",
+    end:"top -300%",
     scrub:3,
     pin:"#shows"
   }
