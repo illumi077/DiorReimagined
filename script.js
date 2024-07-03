@@ -131,7 +131,7 @@ gsap.from('#page3 .overlay',{
 })
 
 gsap.to('#shows .scroll-heading',{
-  xPercent:-705,
+  xPercent:-725,
   scrollTrigger:{
     trigger:'#shows',
     scroller:'body',
@@ -139,6 +139,17 @@ gsap.to('#shows .scroll-heading',{
     end:"top -300%",
     scrub:3,
     pin:"#shows"
+  }
+})
+gsap.from('.page4 img',{
+  yPercent:100,delay:4,stagger:1,
+  scrollTrigger:{
+    trigger:".page4",
+    scroller:"body",
+    start:"top 0%",
+    end:"top -200%",
+    pin:true,
+    scrub:2
   }
 })
 
