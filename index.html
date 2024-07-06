@@ -1,229 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./resources/Dior_icon.ico" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>| Dior</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="./resources/Dior_icon.ico" />
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
-  <title>| Dior</title>
-</head>
-
-<body>
-  <div class="loader"></div>
-  <div id="main">
-    <header class="header">
-      <nav class="">
-        <div class="left-nav">
-          <a href="#">DIOR</a>
+  <body>
+    <div class="loader"></div>
+    <div id="main">
+      <header class="header">
+        <nav class="">
+          <div class="left-nav">
+            <a href="#">DIOR</a>
+          </div>
+          <div class="mid-nav">
+            <a href="#fashion">Fashion</a>
+            <a href="#perfumes">Perfumes</a>
+            <a href="#shows">Shows</a>
+          </div>
+          <div class="right-nav">
+            <img src="./resources/icons8-customer-64.png" alt="" />
+          </div>
+        </nav>
+      </header>
+      <div class="section" id="page1">
+        <video src="./resources/image-video.mp4" autoplay loop muted></video>
+      </div>
+      <div class="section" id="page2">
+        <div id="heading-mobile" class="heading">
+          <h1>
+            The Elegance of <br /><span class="dif-font2">Christian Dior</span>
+          </h1>
         </div>
-        <div class="mid-nav">
-          <a href="#fashion">Fashion</a>
-          <a href="#perfumes">Perfumes</a>
-          <a href="#shows">Shows</a>
+        <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+          <div class="title-div">
+            <h1>
+              The Elegance of <br /><span class="dif-font2"
+                >Christian Dior</span
+              >
+            </h1>
+          </div>
+          <img
+            class="image"
+            src="./resources/images/fashion/kids’-beach-collection-2024.webp"
+            draggable="false"
+            alt=""
+          />
+          <img
+            class="image"
+            src="./resources/images/fashion/444j20am482x9330_1440_1200.avif"
+            draggable="false"
+            alt=""
+          />
+          <img
+            class="image"
+            src="./resources/images/videoframe_4015.png"
+            draggable="false"
+            alt=""
+          />
+          <img
+            class="image"
+            src="./resources/images/fashion/dior3.jpg"
+            draggable="false"
+            alt=""
+          />
+          <img
+            class="image"
+            src="./resources/shows/column-1.avif"
+            draggable="false"
+            alt=""
+          />
+          <img
+            class="image"
+            src="./resources/images/show/main1.webp"
+            draggable="false"
+            alt=""
+          />
+          <img
+            class="image"
+            src="https://wallpapercave.com/wp/wp11013060.jpg"
+            draggable="false"
+            alt=""
+          />
+          <img
+            class="image"
+            src="https://wallpapercave.com/wp/wp12493420.jpg"
+            draggable="false"
+            alt=""
+          />
+          <img
+            class="image"
+            src="./resources/images/fashion/dior1.webp"
+            draggable="false"
+            alt=""
+          />
+          <img
+            class="image"
+            src="./resources/images/fashion/dior4.jpg"
+            draggable="false"
+            alt=""
+          />
         </div>
-        <div class="right-nav">
-          <img src="./resources/icons8-customer-64.png" alt="" />
+      </div>
+      <div class="section" id="page3">
+        <div class="video-div">
+          <video
+            src="./resources/f18977d8d175326cc58d01eb06dd9bee.webm"
+            autoplay
+            loop
+            muted
+          ></video>
+          <div class="overlay">
+            <h1 class="dif-font5">DIORIVIERA</h1>
+            <p>
+              Promising an endless summer, the Dioriviera collection, dreamed up
+              by
+              <span class="dif-font1"
+                >Maria Grazia <br />
+                Chiuri</span
+              >, is infused with the dolce vita so dear to the
+              founding-couturier. <br />
+              This season, a series of exceptional pieces – from ready-to-wear
+              to accessories – are adorned with <br />
+              <span class="dif-font4"> Toile de Jouy Sauvage</span> and
+              <span class="dif-font2"> Toile de Jouy Soleil</span>, revealed in
+              a palette of bewitching, tonic shades. <br />
+              A Dior odyssey in perpetual reinvention.
+            </p>
+            <div class="btn-order">
+              <a href="#">Order</a>
+            </div>
+          </div>
         </div>
-      </nav>
-    </header>
-    <div class="section" id="page1">
-      <video src="./resources/image-video.mp4" autoplay loop muted></video>
-    </div>
-    <div class="section" id="page2">
-      <div id="heading-mobile" class="heading">
-        <h1>
-          The Elegance of <br /><span class="dif-font2">Christian Dior</span>
+      </div>
+      <div class="section-scroll" id="shows" style="position: relative">
+        <h1 class="dif-font5 scroll-heading">
+          Dior.
+          <div class="mid-img">
+            <img
+              src="./resources/shows/dior_cruise25show_videofinale_desktop.avif"
+              alt=""
+            />.
+          </div>
+          Fashion.
+          <div class="mid-img">
+            <img
+              src="./resources/shows/dior_show_ss24_finalshowvideo_desktop.webp"
+              style="object-fit: cover; height: 100%"
+              alt=""
+            />.
+          </div>
+          Weeks.
+          <div class="mid-img">
+            <img
+              src="./resources/shows/dior_men_show_winter24_169.webp"
+              alt=""
+            />.
+          </div>
         </h1>
       </div>
-      <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-        <div class="title-div">
-          <h1>The Elegance of <br /><span class="dif-font2">Christian Dior</span></h1>
-        </div>
-        <img class="image" src="./resources/images/fashion/kids’-beach-collection-2024.webp" draggable="false" alt="" />
-        <img class="image" src="./resources/images/fashion/444j20am482x9330_1440_1200.avif" draggable="false" alt=""/>
-        <img class="image" src="./resources/images/videoframe_4015.png" draggable="false" alt=""/>
-        <img class="image" src="./resources/images/fashion/dior3.jpg" draggable="false" alt=""/>
-        <img class="image" src="./resources/shows/column-1.avif" draggable="false" alt=""/>
-        <img class="image" src="./resources/images/show/main1.webp" draggable="false" alt=""/>
-        <img class="image" src="https://wallpapercave.com/wp/wp11013060.jpg" draggable="false" alt=""/>
-        <img class="image" src="https://wallpapercave.com/wp/wp12493420.jpg" draggable="false" alt=""/>
-        <img class="image" src="./resources/images/fashion/dior1.webp" draggable="false" alt=""/>
-        <img class="image" src="./resources/images/fashion/dior4.jpg" draggable="false" alt=""/>
-      </div>
-    </div>
-    <div class="section" id="page3">
-      <div class="video-div">
-        <video src="./resources/f18977d8d175326cc58d01eb06dd9bee.webm" autoplay loop muted></video>
-        <div class="overlay">
-          <h1 class="dif-font5">DIORIVIERA</h1>
-          <p>
-            Promising an endless summer, the Dioriviera collection, dreamed up
-            by
-            <span class="dif-font1">Maria Grazia <br />
-              Chiuri</span>, is infused with the dolce vita so dear to the
-            founding-couturier. <br />
-            This season, a series of exceptional pieces – from ready-to-wear
-            to accessories – are adorned with <br />
-            <span class="dif-font4"> Toile de Jouy Sauvage</span> and
-            <span class="dif-font2"> Toile de Jouy Soleil</span>, revealed in
-            a palette of bewitching, tonic shades. <br />
-            A Dior odyssey in perpetual reinvention.
-          </p>
-          <div class="btn-order">
-            <a href="#">Order</a>
+      <div class="page4" id="#page4">
+        <div class="model-container">
+          <div class="circle"></div>
+          <div class="model-gallery">
+            <div class="model">
+              <img src="./resources/images/show/look1.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show/look2.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show/look12.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show/look9.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show/look8.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show/look4.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show/look7.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show/look10.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show/look5.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show/look3.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show/look6.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show/look11.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show3/look1.avif" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show3/look10.avif" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show3/look10.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show3/look12.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show3/look13.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show3/look14.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show3/look2.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show3/look3.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show3/look4.webp" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show3/look5.avif" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show3/look7.avif" alt="" />
+            </div>
+            <div class="model">
+              <img src="./resources/images/show3/look9.webp" alt="" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="section-scroll" id="shows" style="position: relative;">
-      <h1 class="dif-font5 scroll-heading">Dior. <div class="mid-img"><img src="./resources/shows/dior_cruise25show_videofinale_desktop.avif" alt="">.</div> Fashion.<div class="mid-img"><img src="./resources/shows/dior_show_ss24_finalshowvideo_desktop.webp" style="object-fit: cover; height: 100%;" alt="">.</div> Weeks.<div class="mid-img"><img src="./resources/shows/dior_men_show_winter24_169.webp" alt="">.</div></h1>
-    </div>
-    <div class="page4" id="#page4">
-      <div class="model-container">
-        <div class="circle"></div>
-        <div class="model-gallery">
-          <div class="model">
-            <img src="./resources/images/show/look1.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show/look2.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show/look12.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show/look9.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show/look8.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show/look4.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show/look7.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show/look10.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show/look5.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show/look3.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show/look6.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show/look11.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show3/look1.avif" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show3/look10.avif" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show3/look10.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show3/look12.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show3/look13.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show3/look14.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show3/look2.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show3/look3.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show3/look4.webp" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show3/look5.avif" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show3/look7.avif" alt="">
-          </div>
-          <div class="model">
-            <img src="./resources/images/show3/look9.webp" alt="">
+      <div class="page5" id="page5">
+        <div class="women">
+          <img src="resources/images/fashion/new1.webp" alt="" />
+          <a href="#" class="switch-btn" onclick="switchBanner(event, 'left');"
+            >For Her</a
+          >
+          <div class="content">
+            <h1>Ladies Fashion</h1>
+            <p>
+              Explore Dior's elegant women's collection, blending timeless
+              classics with modern trends. Each piece showcases exquisite
+              craftsmanship, perfect for special occasions or elevating everyday
+              style. Experience luxury and sophistication with Dior.
+            </p>
+            <a href="#">SHOP AROUND<ion-icon name="cart-outline"></ion-icon></a>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="foot">
-      <footer class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="footer-col">
-              <h4>SIGN UP FOR EXCLUSIVITY</h4>
-              <ul>
-                <li>
-                  <div class="form">
-                    <input placeholder="mail" type="text" name="text" autocomplete="off" />
-                    <label for="text" class="label-name">
-                      <span class="content-name">Your mail</span>
-                    </label>
-                  </div>
-                </li>
 
-              <h4>FIND A BOUTIQUE</h4>
-                <li><a href="#">Parfums Christian Dior Boutiques</a></li>
-                <li><a href="#">Christian Dior Couture Boutiques</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>CLIENT SERVICES</h4>
-              <ul>
-                <li> Contact: </li>
-                <li><a href="#">Parfums Christian Dior</a></li>
-                <li><a href="#">Christian Dior Couture</a></li>
-                <li><a href="#">FAQ</a></li>
+        <div class="men">
+          <img
+            src="resources/images/fashion/mens-fashion-fall-2435.avif"
+            alt=""
+          />
+          <a
+            href="#"
+            class="switch-btn"
+            onclick="switchBanner(event, 'middle');"
+            >For Him</a
+          >
+          <div class="content">
+            <h1>Men's Fashion</h1>
+            <p>
+              Discover Dior's refined men's collection, combining sharp
+              tailoring with contemporary designs. From suits to casual wear,
+              each piece ensures style and confidence for any occasion. Redefine
+              your fashion with Dior.
+            </p>
+            <a href="#">SHOP AROUND<ion-icon name="cart-outline"></ion-icon></a>
+          </div>
+        </div>
 
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>THE HOUSE OF DIOR</h4>
-              <ul>
-                <li><a href="#">To only leave beauty as a legacy</a></li>
-                <li><a href="#">Data Protection</a></li>
-                <li><a href="#">Cookie Management</a></li>
-                <li><a href="#">Ethics & compliance</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Site map</a></li>
-                <li><a href="#">Legal Terms and Conditions</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>follow us</h4>
-              <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <div class="kids">
+          <img
+            src="resources/images/fashion/kids’-beach-collection-2024.webp"
+            alt=""
+          />
+          <a href="#" class="switch-btn" onclick="switchBanner(event, 'right');"
+            >For Kids</a
+          >
+          <div class="content">
+            <h1>kids Fashion</h1>
+            <p>
+              Dress your little ones in Dior's charming kids' collection, where
+              comfort meets style. From playful prints to elegant outfits, each
+              piece is crafted with quality and detail. Let your children's
+              style shine with Dior.
+            </p>
+            <a href="#">SHOP AROUND<ion-icon name="cart-outline"></ion-icon></a>
+          </div>
+        </div>
+        <a href="#" class="reset" onclick="resetBanner(event);">
+          <ion-icon name="power-outline"></ion-icon>
+        </a>
+      </div>
+
+      <div class="foot">
+        <footer class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="footer-col">
+                <h4>SIGN UP FOR EXCLUSIVITY</h4>
+                <ul>
+                  <li>
+                    <div class="form">
+                      <input
+                        placeholder="mail"
+                        type="text"
+                        name="text"
+                        autocomplete="off"
+                      />
+                      <label for="text" class="label-name">
+                        <span class="content-name">Your mail</span>
+                      </label>
+                    </div>
+                  </li>
+
+                  <h4>FIND A BOUTIQUE</h4>
+                  <li><a href="#">Parfums Christian Dior Boutiques</a></li>
+                  <li><a href="#">Christian Dior Couture Boutiques</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>CLIENT SERVICES</h4>
+                <ul>
+                  <li>Contact:</li>
+                  <li><a href="#">Parfums Christian Dior</a></li>
+                  <li><a href="#">Christian Dior Couture</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>THE HOUSE OF DIOR</h4>
+                <ul>
+                  <li><a href="#">To only leave beauty as a legacy</a></li>
+                  <li><a href="#">Data Protection</a></li>
+                  <li><a href="#">Cookie Management</a></li>
+                  <li><a href="#">Ethics & compliance</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Site map</a></li>
+                  <li><a href="#">Legal Terms and Conditions</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
-  <script src="./script.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
