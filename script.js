@@ -7,6 +7,68 @@ gsap.ticker.add((time) => {
 });
 
 gsap.ticker.lagSmoothing(0);
+const loadingOverlay = document.getElementById('loading-overlay');
+const images = document.querySelectorAll('img');
+const videos = document.querySelectorAll('video');
+videos.forEach(video => video.pause());
+
+function areAllLoaded(images, videos) {
+
+  for (let i = 0; i < images.length; i++) {
+    if (!images[i].complete) {
+      return false;
+    }
+  }
+  for (let i = 0; i < videos.length; i++) {
+    if (videos[i].readyState !== 4) { 
+      return false;
+    }
+  }
+  return true;
+}
+
+
+window.addEventListener('load', function() {
+  const startTime = performance.now(); 
+
+
+  if (areAllLoaded(images, videos)) {
+    hideLoader(startTime); 
+  } else {
+    
+    images.forEach(image => {
+      image.addEventListener('load', () => {
+        hideLoader(startTime);
+      });
+    });
+
+    videos.forEach(video => {
+      video.addEventListener('loadedmetadata', () => {
+        hideLoader(startTime);
+      });
+    });
+  }
+});
+
+
+function hideLoader(startTime) {
+  const elapsedTime = performance.now() - startTime;
+
+  
+  const minDuration = 2000; 
+  const delay = Math.max(minDuration - elapsedTime, 0); 
+  console.log(elapsedTime);
+  setTimeout(() => {
+    gsap.to(loadingOverlay, { 
+      duration: 1, yPercent: -100, ease: "power2.out",
+      onComplete: () => {
+      loadingOverlay.style.visibility = 'hidden';
+    }});
+    videos.forEach(video => video.play());    
+  }, delay);
+}
+
+
 
 const body = document.body;
 let lastScroll = 0;
@@ -135,47 +197,70 @@ gsap.from("#page3 .overlay", {
   },
 });
 
-gsap.to("#shows .scroll-heading", {
-  xPercent: -725,
-  scrollTrigger: {
-    trigger: "#shows",
-    scroller: "body",
-    start: "top 0",
-    end: "top -300%",
-    scrub: 3,
-    pin: "#shows",
-  },
-});
-gsap.from(".page4 img", {
-  yPercent: 100,
-  delay: 4,
-  stagger: 1,
-  scrollTrigger: {
-    trigger: ".page4",
-    scroller: "body",
-    start: "top 0%",
-    end: "top -200%",
-    pin: true,
-    scrub: 2,
-  },
-});
+const isMobile = window.matchMedia("(max-width: 768px)");
+
+if (!isMobile.matches) {
+    gsap.to("#shows .scroll-heading", {
+        xPercent: -650,
+        scrollTrigger: {
+            trigger: "#shows",
+            scroller: "body",
+            start: "top 0",
+            end: "top -300%",
+            scrub: 3,
+            pin: "#shows",
+        },
+    });
+}
+if (!isMobile.matches){
+  gsap.from(".page4 img", {
+    yPercent: 100,
+    stagger: 1,
+    scrollTrigger: {
+      trigger: ".page4",
+      scroller: "body",
+      start: "top 0%",
+      end: "top -200%",
+      pin: true,
+      scrub: 2,
+    },
+  });
+}else{
+  gsap.from(".page4 img", {
+    yPercent: 100,
+    stagger: 1,
+    scrollTrigger: {
+      trigger: ".page4",
+      scroller: "body",
+      start: "top 0%",
+      end: "top -50%",
+      pin: true,
+      scrub: 2,
+    },
+  });
+}
 
 const galleryContainer = document.querySelector(".model-container");
 const galleryItems = document.querySelectorAll(".model");
 const indicator = document.querySelector(".circle");
 
-const defaultItemFlex = "0 1 10vw";
-const hoverItemFlex = "1 1 50vw";
+let defaultItemFlex = "0 1 10vw";
+let hoverItemFlex = "1 1 50vw";
 
 const updateGalleryItems = () => {
   galleryItems.forEach((item) => {
-    let flex = defaultItemFlex;
-    if (item.isHovered) {
-      flex = hoverItemFlex;
+    if (isMobile.matches) {
+      defaultItemFlex = "0 1 30vw";
+      item.style.flex = defaultItemFlex
+    } else {
+      flex = item.isHovered ? hoverItemFlex : defaultItemFlex;
     }
+
     item.style.flex = flex;
   });
 };
+
+
 galleryItems[0].isHovered = true;
 updateGalleryItems();
 
@@ -197,25 +282,47 @@ galleryContainer.addEventListener("mousemove", (e) => {
 //toggle reset button
 
 function toggleResetBtn() {
-  const resetBtn = document.querySelector(".reset");
-  resetBtn.classList.toggle("active");
+  const resetBtn = document.querySelector('.reset');
+  resetBtn.classList.toggle('active');
 }
 
-// Switch left, right and middle
+// Switch left, right, and middle
 function switchBanner(event, name) {
   event.preventDefault();
-  const page5 = document.querySelector("#page5");
+  const page5 = document.querySelector('#page5');
   if (!page5.classList.contains(name)) {
-    page5.className = "page5";
-    page5.classList.add(name);
-    toggleResetBtn();
+      page5.className = 'page5';
+      page5.classList.add(name);
+      toggleResetBtn();
+  }
+  if (window.innerWidth <= 600) { // Hide switch buttons only on mobile view
+      hideSwitchButtons();
   }
 }
 
-// reset Banner
+// Reset Banner
 function resetBanner(event) {
   event.preventDefault();
-  const page5 = document.querySelector("#page5");
-  page5.className = "page5";
+  const page5 = document.querySelector('#page5');
+  page5.className = 'page5';
   toggleResetBtn();
+  if (window.innerWidth <= 600) { // Show switch buttons only on mobile view
+      showSwitchButtons();
+  }
+}
+
+// Hide switch buttons
+function hideSwitchButtons() {
+  const switchButtons = document.querySelectorAll('.switch-btn');
+  switchButtons.forEach(button => {
+      button.style.display = 'none';
+  });
+}
+
+// Show switch buttons
+function showSwitchButtons() {
+  const switchButtons = document.querySelectorAll('.switch-btn');
+  switchButtons.forEach(button => {
+      button.style.display = 'block';
+  });
 }
