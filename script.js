@@ -251,6 +251,7 @@ let hoverItemFlex = "1 1 50vw";
 
 const updateGalleryItems = () => {
   galleryItems.forEach((item) => {
+    let flex = defaultItemFlex
     if (isMobile.matches) {
       defaultItemFlex = "0 1 30vw";
       item.style.flex = defaultItemFlex

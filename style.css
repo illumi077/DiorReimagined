@@ -696,6 +696,7 @@ ul {
     align-items: center;
     overflow: hidden;
     border-radius: 2vw;
+    /* font-family: Damion; */
 }
 
 
@@ -827,11 +828,15 @@ ul {
     font-size: 3em;
     font-weight: 50;
     margin-top: 40%;
-    z-index: 1000;
+    z-index: 100;
     transition: 0.5s;
     transform: scale(1);
     letter-spacing: 2px;
-    font-family: "Times New Roman";
+    font-weight: 500;
+    font-style: italic;
+    font-family: mainFont;
+
+    /* font-family: "Times New Roman"; */
 }
 
 .switch-btn:hover {
@@ -882,7 +887,8 @@ ul {
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    
+    /* font-family: Georgia, "Times New Roman", Times, serif; */
 }
 
 #page5 .content p {
@@ -898,7 +904,6 @@ ul {
 #page5 .content a {
     position: relative;
     width: 200px;
-    margin-left: 4vw;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 400;
@@ -910,7 +915,7 @@ ul {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    /* font-family: Georgia, "Times New Roman", Times, serif; */
 }
 
 #page5 .content a ion-icon {
@@ -1033,6 +1038,7 @@ ul {
     }
     #page5 .content a {
         width: 150px;
+        margin-left: 4vw;
         padding: 8px 12px;
         font-size: 0.75em;
     }
