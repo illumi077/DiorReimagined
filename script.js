@@ -11,6 +11,7 @@ const loadingOverlay = document.getElementById('loading-overlay');
 const images = document.querySelectorAll('img');
 const videos = document.querySelectorAll('video');
 videos.forEach(video => video.pause());
+document.body.style.overflow = "hidden";
 
 function areAllLoaded(images, videos) {
 
@@ -59,6 +60,7 @@ function hideLoader(startTime) {
   const delay = Math.max(minDuration - elapsedTime, 0); 
   console.log(elapsedTime);
   setTimeout(() => {
+    document.body.style.overflow = "visible";
     gsap.to(loadingOverlay, { 
       duration: 1, yPercent: -100, ease: "power2.out",
       onComplete: () => {
